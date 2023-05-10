@@ -1,0 +1,46 @@
+let x = 0;
+let y = 0;
+
+
+function setup() {
+  
+  createCanvas(windowWidth, windowHeight);
+  frameRate(5);
+  colorMode(HSB, 10, 100, 100, 1)
+
+  for(let i = 0; i < 10; i++){
+  
+  }
+ 
+}
+
+function draw() {
+  background(220);
+  let index = 0
+
+  for (let x = 0; x < width; x += random(20, 50)) {
+    let r = map(x, 0, width, 0, 255);
+    let g = 0;
+    let b = 255 - r;
+   
+    //fill(r, g, b)
+   
+    //rect(x,y,50,30);
+
+   // }
+
+    for (let y = 0; y < height; y += 30) {
+      let r = map(x + (y*mouseX), 0, width, 0, 10) % 10;
+      let g = 0;
+      let b = 255 - r;
+      noStroke()
+      fill(r,100, 100);
+      rect(x, y, random(50, 70), 30);
+    }
+    //{
+
+    //let r = map(x, 0, width, 0, 255); // Map the x-coordinate to the red channel
+    //let g = 0; // Set the green channel to 0
+    //let b = 255 - r; // Calculate the blue channel based on the red value
+  }
+}
